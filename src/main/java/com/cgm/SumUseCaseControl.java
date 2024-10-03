@@ -10,7 +10,11 @@ public class SumUseCaseControl implements InputBoundary {
     //methods
     public SumUseCaseControl(){
         sumEntity = new SumEntity();
-        sumUIConsoleOutput = new SumUIConsoleOutput();
+        //sumUIConsoleOutput = new SumUIConsoleOutput();
+    }
+
+    public void setSumUIConsoleOutput(OutputBoundary sumUIConsoleOutput) {
+        this.sumUIConsoleOutput = sumUIConsoleOutput;
     }
 
     public void execute(RequestData requestData) {

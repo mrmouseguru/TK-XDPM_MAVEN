@@ -6,25 +6,37 @@ import java.io.PrintWriter;
 public class SumUIConsoleOutput implements OutputBoundary{
 
     //fields
-    private PrintWriter stdOut = null;
+  //  private PrintWriter stdOut = null;
+    private ResponseEror responseEror = null;
+    private ResponseData responseData = null;
     //
 
     public SumUIConsoleOutput(){
-        stdOut = new PrintWriter(
-            new OutputStreamWriter(System.out));
+       // stdOut = new PrintWriter(
+         //   new OutputStreamWriter(System.out));
     }
     public void output(ResponseData responseData) {
-        stdOut.print("Ket qua la: " + responseData.strSumResult);
-        stdOut.flush();
+        this.responseData = responseData;
+       // stdOut.print("Ket qua la: " + responseData.strSumResult);
+       // stdOut.flush();
     }
 
     public void showError(ResponseEror responseEror){
-        err(responseEror);
+        this.responseEror = responseEror;
+        //err(responseEror);
     }
 
     private void err(ResponseEror responseEror){
-        stdOut.println("ERROR: " + responseEror.error );
-        stdOut.flush();
+       // stdOut.println("ERROR: " + responseEror.error );
+       // stdOut.flush();
+    }
+
+    public ResponseEror getResponseEror() {
+        return responseEror;
+    }
+
+    public ResponseData getResponseData() {
+        return responseData;
     }
 
 }
