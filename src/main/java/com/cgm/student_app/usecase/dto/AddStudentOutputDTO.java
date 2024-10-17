@@ -8,15 +8,16 @@ public class AddStudentOutputDTO {
     protected String hoTen;
     protected Date ngaySinh;
     protected String diaChi;
-
+    protected String nganh;
     protected double diemTB;
 
     protected String hocLuc;
 
-    public AddStudentOutputDTO(int maSV, String hoTen, Date ngaySinh, String diaChi, double diemTB,
+    public AddStudentOutputDTO(int maSV, String hoTen, String nganh, Date ngaySinh, String diaChi, double diemTB,
             String hocLuc) {
         this.maSV = maSV;
         this.hoTen = hoTen;
+        this.nganh = nganh;
         this.ngaySinh = ngaySinh;
         this.diaChi = diaChi;
         this.diemTB = diemTB;
@@ -73,6 +74,10 @@ public class AddStudentOutputDTO {
         this.hocLuc = hocLuc;
     }
 
+
+    public String getNganh() {
+        return nganh;
+    }
     
 
     

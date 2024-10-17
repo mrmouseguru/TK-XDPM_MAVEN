@@ -45,7 +45,7 @@ public class AddStudentUseCase implements AddStudentInputBoundary {
         Student addedStudent = addStudentDBBondary.findStudentById(addedStudentId);
 
         AddStudentOutputDTO addStudentOutputDTO = new AddStudentOutputDTO(
-                addedStudent.getMaSV(), addedStudent.getHoTen(),
+                addedStudent.getMaSV(), addedStudent.getHoTen(), addedStudent.getNganh(),
                 addedStudent.getNgaySinh(), addedStudent.getDiaChi(),
                 addedStudent.tinhDiemTB(), addedStudent.getHocLuc());
 
