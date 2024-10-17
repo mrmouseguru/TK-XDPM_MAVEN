@@ -38,6 +38,7 @@ public class AddStudentUseCase implements AddStudentInputBoundary {
                     addStudentInputDTO.getDiemMarketing(), addStudentInputDTO.getDiemSales());
         }
 
+        //THEM VAO DATABASE
         int addedStudentId = addStudentDBBondary.addStudent(student);
 
         // tifm sinh vien

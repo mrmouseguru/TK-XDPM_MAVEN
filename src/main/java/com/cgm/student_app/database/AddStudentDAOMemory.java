@@ -12,7 +12,7 @@ public class AddStudentDAOMemory implements AddStudentDatabaseBoundary{
     @Override
     public int addStudent(Student student) {
 
-        mockDatabase.put(currentStudentId ++, student);
+        mockDatabase.put(++currentStudentId, student);
         return currentStudentId;
 
     }
